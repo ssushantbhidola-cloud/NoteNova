@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CollegeConnect Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <h2 class="logo">Note<span>Nova</span></h2>
+            <nav>
+                <ul>
+                    <li><a href="#">Dashboard</a></li>
+                    <li class="active"><a href="#">Notes Market</a></li>
+                    <li><a href="#">AI Assistant ChatBot</a></li>
+                    <li><a href="#">Monthly Quiz</a></li>
+                    <li><a href="#">Doubt Forum</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header>
+                <h1>Student Portal</h1>
+                <div style="display: flex; align-items: center; gap: 15px;">
+                    <button id="theme-toggle" class="btn-outline" style="padding: 5px 10px;">
+            🌙 Dark Mode
+        </button>
+                    <div class="user-badge">Rahul Sharma</div>
+                </div>
+
+            </header>
+
+            <div class="dashboard-grid">
+                <div class="left-col">
+                    <div class="card">
+                        <h3>Top Rated Notes</h3>
+                        <div class="note-item">
+                            <div class="note-info">
+                                <strong>Data Structures.pdf</strong>
+                                <span class="rating">★★★★☆ (4.8)</span>
+                            </div>
+                            <div class="actions">
+                                <button class="btn-primary">Upload Note</button>
+                                <button class="btn-outline">Download</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="note-item">
+                            <div class="note-info">
+                                <strong>JAVA.zip</strong>
+                                <span class="rating">★★★★☆ (4.8)</span>
+                            </div>
+                            <button class="btn-outline">Download</button>
+                        </div>
+                    </div>
+
+                    <div class="card forum">
+                        <h3>Community Forum</h3>
+                        <blockquote>
+                            "How do I balance chemical equations effectively?"
+                        </blockquote>
+                        <p class="answers-count">— 3 Answers</p>
+                    </div>
+                </div>
+
+                <div class="right-col">
+                    <div class="card ai-tutor">
+                        <h3>✨ AI Tutor</h3>
+                        <div id="chat-box" class="chat-box">
+                            <p class="msg-student">Student: Explain Faraday's Law.</p>
+                            <p class="msg-ai">AI: Induction occurs when...</p>
+                        </div>
+                        <input type="text" id="ai-input" placeholder="Ask doubt...">
+                    </div>
+
+                    <div class="card leaderboard">
+                        <h3>🏆 Quiz Leaderboard</h3>
+                        <ol>
+                            <li><span>Amit</span> <strong>98%</strong></li>
+                            <li><span>Sneha</span> <strong>95%</strong></li>
+                            <li><span>Vikram</span> <strong>92%</strong></li>
+                            <li><span>Rahul</span> <strong>92%</strong></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="logic.js"></script>
+</body>
+
+</html>
