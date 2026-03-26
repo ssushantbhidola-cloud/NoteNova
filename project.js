@@ -23,4 +23,19 @@ document.getElementById('ai-input').addEventListener('keypress', function(e) {
         }
     }
 
+    const uploadBtn = document.getElementById('upload-trigger');
+    const fileInput = document.getElementById('file-input');
+
+    uploadBtn.addEventListener('click', () => {
+        fileInput.click(); // Triggers the hidden file selector
+    });
+
+    fileInput.addEventListener('change', (event) => {
+        const file = event.target.files[0];
+        if (file) {
+            alert(`Uploading: ${file.name}`);
+            // Here you would typically use FormData and fetch() to send the file to a server
+        }
+    });
+
 });
